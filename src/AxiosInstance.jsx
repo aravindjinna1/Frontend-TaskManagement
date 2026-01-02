@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://taskmanagement-backend-ona0.onrender.com",
+  baseURL: "http://localhost:5000/api",
 });
 
 
