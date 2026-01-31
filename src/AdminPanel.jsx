@@ -17,7 +17,7 @@ const Admin = () => {
   // catch
   return (
     <div>
-    <p className="text-green-500">Admin can only access the data</p>
+    <p className="text-green-500 mt-10">Admin can only access the data</p>
   <h2 className="text-3xl mt-10 text-orange-600 font-bold">{data}</h2>
   </div>
   ) 

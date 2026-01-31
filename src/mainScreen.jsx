@@ -15,11 +15,11 @@ function App() {
       style={{
         textAlign: "center",
         minHeight: "100vh",
-        background: "radial-gradient(circle at top, #eef5ff, #dbe9ff)",
+        background: "radial-gradient(circle at top, #eef5ff, #c2d7fa)",
       }}
       className="flex flex-col items-center overflow-hidden"
     >
-      <div className="w-full flex justify-between items-center px-10 py-6">
+      <div className="w-full flex justify-between items-center px-10 py-6 mr-15 md:mr-auto">
         <div className="flex items-center gap-3 text-blue-700 text-xl font-semibold ">
           <div className="w-7 h-7 border-2 border-blue-600 rounded-md flex items-center justify-center">
             ✓

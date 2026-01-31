@@ -100,46 +100,73 @@ const handleUpdate = async () => {
       </div>
 
 
-      {/* <ul className="text-xl">
-
-        {tasks.map((t) => (
-          <li className="mt-4 " key={t._id}>
-            {t.title}{" "}
-
-            
-            <button onClick={() => handleEdit(task)}>Edit</button>
-
-            <button className="bg-white text-black rounded p-1 cursor-pointer" onClick={() => deleteTask(t._id)}>Delete</button>
-          </li>
-        ))}
-      </ul> */}
 
 
+<div className="mt-6 w-full max-w-3xl rounded-2xl bg-white p-4 sm:p-6 shadow-[0_15px_35px_rgba(0,0,0,0.12)]">
+  <p className="mb-4 text-center text-orange-600 font-medium">
+    You can edit the text after adding
+  </p>
 
-<div className=" shadow-[0_10px_25px_rgba(0,0,0,0.12)] pl-20 pr-20 bg-white rounded-2xl  p-4 mt-4 max-w-300 grid place-items-center">
-  <p className="text-orange-600">You can Edit the text after Adding</p>
+  <div className="space-y-3">
+    {tasks.map((task) => (
+      <div
+        key={task._id}
+        className="flex flex-col gap-3 rounded-xl border border-gray-200 bg-gray-50 p-4 hover:shadow-md transition sm:flex-row sm:items-center sm:justify-between"
+      >
+        {editId === task._id ? (
+          <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center">
+            <input
+              className="w-full flex-1 rounded-lg border border-blue-500 px-3 py-2 text-black outline-none focus:ring-2 focus:ring-blue-400"
+              value={editText}
+              onChange={(e) => setEditText(e.target.value)}
+            />
 
-{tasks.map((task) => (
-  <div key={task._id} >
-    {editId === task._id ? (
-      <div className="flex gap-2 justify-center items-center mt-2">
-        <input className="border-blue-600 border-[1.5px] text-black bg-white cursor-pointer  rounded p-1 "
-          value={editText}
-          onChange={(e) => setEditText(e.target.value)}
-        />
-        <button onClick={handleUpdate}  className=" cursor-pointer bg-green-500 p-2 rounded">Update</button>
-        <button onClick={() => setEditId(null)} className="cursor-pointer bg-red-500 p-2 rounded">Cancel</button>
+            <div className="flex gap-2">
+              <button
+                onClick={handleUpdate}
+                className="flex-1 rounded-lg bg-green-500 px-4 py-2 text-white hover:bg-green-600 transition"
+              >
+                Update
+              </button>
+
+              <button
+                onClick={() => setEditId(null)}
+                className="flex-1 rounded-lg bg-red-500 px-4 py-2 text-white hover:bg-red-600 transition"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        ) : (
+          <>
+            {/* Task text */}
+            <span className="break-words text-blue-600 font-medium sm:max-w-[70%]">
+              {task.title}
+            </span>
+
+            {/* Buttons */}
+            <div className="flex gap-3 self-end sm:self-auto">
+              <button
+                onClick={() => handleEdit(task)}
+                className="rounded-lg bg-green-500 px-3 py-2 text-white hover:bg-green-600 transition"
+                title="Edit"
+              >
+                ✏️
+              </button>
+
+              <button
+                onClick={() => deleteTask(task._id)}
+                className="rounded-lg bg-red-500 px-3 py-2 text-white hover:bg-red-600 transition"
+                title="Delete"
+              >
+                🗑️
+              </button>
+            </div>
+          </>
+        )}
       </div>
-    ) : (
-      <div className=" flex justify-center items-center gap-4 mt-3 ">
-        <span className="text-blue-600">{task.title}</span>
-        <button onClick={() => handleEdit(task)} className=" cursor-pointer bg-green-500 p-2 rounded ">Edit</button>
-        <button onClick={() => deleteTask(task._id)} className=" cursor-pointer bg-red-500 p-2 rounded">Delete</button>
-      </div>
-    )}
-    
+    ))}
   </div>
-))}
 </div>
 
   
