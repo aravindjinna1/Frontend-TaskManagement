@@ -35,7 +35,7 @@ const Register = ({ setLoggedIn }) => {
       <h2 className="text-2xl mb-4 mt-4 text-blue-600 font-bold">Register</h2>
             <div className="flex md:flex-row  flex-col gap-2 items-center justify-center">
 
-      <input require className="border-blue-600 border-[1.5px] bg-white text-black rounded p-1 "
+      <input required className="border-blue-600 border-[1.5px] bg-white text-black rounded p-1 "
         type="text"
         placeholder="Name"
         value={name}
