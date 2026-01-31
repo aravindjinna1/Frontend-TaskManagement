@@ -42,19 +42,20 @@ const Tasks = () => {
 
   return (
     <div>
-      <h2 className="mb-4 mt-4 text-2xl ">Tasks</h2>
-      <input className="bg-white text-black rounded p-1"
+      <h2 className="mb-2 mt-1 text-2xl text-blue-600 font-bold">Tasks</h2>
+      <p className="text-red-500 mb-2">You have to login to enter tasks other wise Tasks won't add </p>
+      <input className="border-blue-600 border-[1.5px] text-black bg-white cursor-pointer  rounded p-1"
         placeholder="New task"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <button className="bg-white text-black rounded p-1 ml-2" onClick={addTask}>Add Task</button>
+      <button className="bg-blue-700 border-[1.5px] text-white  rounded p-1 ml-2 cursor-pointer" onClick={addTask}>Add Task</button>
 
       <ul className="text-xl">
         {tasks.map((t) => (
           <li className="mt-4 " key={t._id}>
             {t.title}{" "}
-            <button className="bg-white text-black rounded p-1" onClick={() => deleteTask(t._id)}>Delete</button>
+            <button className="bg-white text-black rounded p-1 cursor-pointer" onClick={() => deleteTask(t._id)}>Delete</button>
           </li>
         ))}
       </ul>

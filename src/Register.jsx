@@ -33,33 +33,33 @@ const Register = ({ setLoggedIn }) => {
 
   return (
     <div>
-      <h2 className="text-2xl mb-4 mt-4">Register</h2>
-            <div className="flex gap-2 items-center justify-center">
+      <h2 className="text-2xl mb-4 mt-4 text-blue-600 font-bold">Register</h2>
+            <div className="flex md:flex-row  flex-col gap-2 items-center justify-center">
 
-      <input require className="border bg-white text-black rounded p-1"
+      <input require className="border-blue-600 border-[1.5px] bg-white text-black rounded p-1 "
         type="text"
         placeholder="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <input required className="border bg-white text-black rounded p-1"
+      <input required className="border-blue-600 border-[1.5px] bg-white text-black rounded p-1"
         type="email"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <input required className="border bg-white text-black rounded p-1"
+      <input required className="border-blue-600 border-[1.5px] bg-white text-black rounded p-1"
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <select  className="border bg-white text-black rounded p-1" value={role} onChange={(e) => setRole(e.target.value)}>
+      <select  className="border-blue-600 border-[1.5px] bg-white text-black rounded p-1" value={role} onChange={(e) => setRole(e.target.value)}>
         <option value="user">User</option>
         <option value="admin">Admin</option>
       </select>
 
-      <button  className="border bg-white text-black rounded p-1" onClick={handleRegister}>Register</button>
+      <button  className="bg-blue-700 border-[1.5px] cursor-pointer text-white font-semibold rounded p-1" onClick={handleRegister}>Register</button>
       {error && <p style={{ color: "red" }}>{error}</p>}
       </div>
     </div>

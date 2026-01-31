@@ -27,24 +27,24 @@ const Login = ({ setLoggedIn }) => {
   };
 
   return (
-    <div>
-      <h2 className="text-2xl mb-4 mt-4">Login</h2>
-      <div className="flex gap-2 items-center justify-center">
-      <input className="border bg-white text-black rounded p-1"
+    <div className="">
+      <h2 className="text-2xl mb-4 mt-4 text-blue-600 font-bold">Login</h2>
+      <div className="flex gap-2 items-center justify-center md:flex-row flex-col">
+      <input className="border-blue-600 border-[1.5px] text-black bg-white cursor-pointer  rounded p-1"
         type="email"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <input className="border bg-white text-black rounded p-1"
+      <input className="border-blue-600 border-[1.5px]  bg-white cursor-pointer text-black rounded p-1"
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button className="border bg-white text-black rounded p-1" onClick={handleLogin}>Login</button>
+      <button className="bg-blue-600 border-[1.5px]   cursor-pointer  rounded p-1" onClick={handleLogin}>Login</button>
        </div>
-       <p className="mt-4">You must Register First then login with same email and password</p>
+       <p className="mt-4 text-red-500">You must Register First then login with same email and password</p>
       {error && <p style={{ color: "red" }}>{error}</p>}
      
     </div>
