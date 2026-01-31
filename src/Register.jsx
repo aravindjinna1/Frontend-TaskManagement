@@ -1,4 +1,4 @@
-// src/Register.jsx
+
 import React, { useState } from "react";
 import axiosInstance from "./AxiosInstance";
 
@@ -18,7 +18,6 @@ const Register = ({ setLoggedIn }) => {
         role,
       });
 
-      // Optional: automatically login after registration if backend returns token
       if (res.data.token) {
         localStorage.setItem("token", res.data.token);
         setLoggedIn(true);

@@ -65,28 +65,7 @@ function App() {
             path="/register"
             element={
               <div>
-                {/* <div className="flex gap-5 justify-center items-center mb-10">
-                  <Link to="/register">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Register
-                    </button>
-                  </Link>
-                  <Link to="/login">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Login
-                    </button>
-                  </Link>
-                  <Link to="/tasks">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Tasks
-                    </button>
-                  </Link>
-                  <Link to="/AdminPanel">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      AdminPanel
-                    </button>
-                  </Link>
-                </div> */}
+            
 
                 <Register />
               </div>
@@ -97,28 +76,7 @@ function App() {
             path="/login"
             element={
               <>
-                {/* <div className="flex gap-5 justify-center items-center mb-10">
-                  <Link to="/register">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Register
-                    </button>
-                  </Link>
-                  <Link to="/login">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Login
-                    </button>
-                  </Link>
-                  <Link to="/tasks">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Tasks
-                    </button>
-                  </Link>
-                  <Link to="/AdminPanel">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      AdminPanel
-                    </button>
-                  </Link>
-                </div> */}
+          
 
                 <Login setLoggedIn={setLoggedIn} />
               </>
@@ -129,28 +87,7 @@ function App() {
             path="/"
             element={
               <>
-                {/* <div className="flex gap-5 justify-center items-center mb-10">
-                  <Link to="/register">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Register
-                    </button>
-                  </Link>
-                  <Link to="/login">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Login
-                    </button>
-                  </Link>
-                  <Link to="/tasks">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Tasks
-                    </button>
-                  </Link>
-                  <Link to="/AdminPanel">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      AdminPanel
-                    </button>
-                  </Link>
-                </div> */}
+           
 
                 <Tasks />
               </>
@@ -161,29 +98,7 @@ function App() {
             path="/AdminPanel"
             element={
               <>
-                {/* <div className="flex gap-5 justify-center items-center mb-10">
-                  <Link to="/register">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Register
-                    </button>
-                  </Link>
-                  <Link to="/login">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Login
-                    </button>
-                  </Link>
-                  <Link to="/tasks">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      Tasks
-                    </button>
-                  </Link>
-                  <Link to="/AdminPanel">
-                    <button className="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg">
-                      AdminPanel
-                    </button>
-                  </Link>
-                </div> */}
-
+         
                 <AdminPanel />
               </>
             }
