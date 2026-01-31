@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+/* body parser */
 body{
   background-color: rgb(255, 255, 255);
   color: aliceblue;

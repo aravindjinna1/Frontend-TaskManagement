@@ -14,11 +14,11 @@ const Admin = () => {
       .then((res) => setData(res.data.secretData))
       .catch(() => alert("Access denied"));
   }, []);
-  
+  // catch
   return (
     <div>
-    <p className="text-green-500">Admin can only acess the data</p>
-  <h2 className="text-3xl mt-10">{data}</h2>
+    <p className="text-green-500">Admin can only access the data</p>
+  <h2 className="text-3xl mt-10 text-orange-600 font-bold">{data}</h2>
   </div>
   ) 
 };

@@ -27,9 +27,9 @@ const Login = ({ setLoggedIn }) => {
   };
 
   return (
-    <div className="">
+    <div className="grid place-items-center mt-15 md:mt-auto">
       <h2 className="text-2xl mb-4 mt-4 text-blue-600 font-bold">Login</h2>
-      <div className="flex gap-2 items-center justify-center md:flex-row flex-col">
+      <div className="flex p-6 gap-2 items-center justify-center  flex-col  flex bg-white max-w-100 items-center justify-center  flex-col gap-2 items-center justify-center  shadow-[0_10px_25px_rgba(0,0,0,0.12)] pl-20 pr-20 bg-white rounded-2xl">
       <input className="border-blue-600 border-[1.5px] text-black bg-white cursor-pointer  rounded p-1"
         type="email"
         placeholder="Email"
@@ -42,7 +42,7 @@ const Login = ({ setLoggedIn }) => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button className="bg-blue-600 border-[1.5px]   cursor-pointer  rounded p-1" onClick={handleLogin}>Login</button>
+      <button className="bg-blue-600 border-[1.5px] hover:bg-white hover:border-blue-600 hover:text-blue-600  cursor-pointer  rounded p-1" onClick={handleLogin}>Login</button>
        </div>
        <p className="mt-4 text-red-500">You must Register First then login with same email and password</p>
       {error && <p style={{ color: "red" }}>{error}</p>}

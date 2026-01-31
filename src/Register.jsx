@@ -31,11 +31,11 @@ const Register = ({ setLoggedIn }) => {
   };
 
   return (
-    <div>
+    <div className="grid place-items-center relative top-[] mt-15 md:mt-auto">
       <h2 className="text-2xl mb-4 mt-4 text-blue-600 font-bold">Register</h2>
-            <div className="flex md:flex-row  flex-col gap-2 items-center justify-center">
+            <div className="flex bg-white max-w-100 items-center justify-center  flex-col gap-2 items-center justify-center  shadow-[0_10px_25px_rgba(0,0,0,0.12)] pl-20 pr-20 bg-white rounded-2xl">
 
-      <input required className="border-blue-600 border-[1.5px] bg-white text-black rounded p-1 "
+      <input required className="border-blue-600 mt-6 border-[1.5px] bg-white text-black rounded p-1 "
         type="text"
         placeholder="Name"
         value={name}
@@ -53,12 +53,14 @@ const Register = ({ setLoggedIn }) => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
+      <div className="mb-4">
       <select  className="border-blue-600 border-[1.5px] bg-white text-black rounded p-1" value={role} onChange={(e) => setRole(e.target.value)}>
         <option value="user">User</option>
         <option value="admin">Admin</option>
       </select>
 
       <button  className="bg-blue-700 border-[1.5px] cursor-pointer text-white font-semibold rounded p-1" onClick={handleRegister}>Register</button>
+      </div>
       {error && <p style={{ color: "red" }}>{error}</p>}
       </div>
     </div>

@@ -20,7 +20,7 @@ function App() {
       className="flex flex-col items-center overflow-hidden"
     >
       <div className="w-full flex justify-between items-center px-10 py-6">
-        <div className="flex items-center gap-3 text-blue-700 text-xl font-semibold">
+        <div className="flex items-center gap-3 text-blue-700 text-xl font-semibold ">
           <div className="w-7 h-7 border-2 border-blue-600 rounded-md flex items-center justify-center">
             ✓
           </div>
@@ -31,29 +31,29 @@ function App() {
 
 
           <Link to="/register">
-            <button className="border border-blue-600 text-blue-600 px-4 py-1.5 rounded-lg hover:bg-blue-50">
+            <button className="border border-blue-600 hover:bg-blue-600 cursor-pointer hover:text-white text-blue-600 px-4 py-1.5 rounded-lg hover:bg-blue-50">
               Register
             </button>
           </Link>
           <Link to="/login">
-            <button className="border border-blue-600 text-blue-600 px-4 py-1.5 rounded-lg hover:bg-blue-50">
+            <button className="border border-blue-600 text-blue-600 hover:bg-blue-600 cursor-pointer hover:text-white px-4 py-1.5 rounded-lg hover:bg-blue-50">
               Login
             </button>
           </Link>
           <Link to="/">
-            <button className="border border-blue-600 text-blue-600 px-4 py-1.5 rounded-lg hover:bg-blue-50">
+            <button className="hover:bg-blue-600 cursor-pointer hover:text-white border border-blue-600 text-blue-600 px-4 py-1.5 rounded-lg hover:bg-blue-50">
               Tasks
             </button>
           </Link>
           <Link to="/AdminPanel">
-            <button className="border border-blue-600 text-blue-600 px-4 py-1.5 rounded-lg hover:bg-blue-50">
+            <button className="border hover:bg-blue-600 cursor-pointer hover:text-white border-blue-600 text-blue-600 px-4 py-1.5 rounded-lg hover:bg-blue-50">
               AdminPanel
             </button>
           </Link>
         </div>
       </div>
 
-      <h1 className="text-5xl font-bold text-blue-700 mt-20 mb-10">
+      <h1 className="text-5xl font-bold text-blue-700 mt-5 ">
         Task App
       </h1>
 
