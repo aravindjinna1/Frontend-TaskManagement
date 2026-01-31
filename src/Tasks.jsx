@@ -8,6 +8,7 @@ import axiosInstance from "./AxiosInstance";
 const Tasks = () => {
   const [tasks, setTasks] = useState([]);
   const [title, setTitle] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const fetchTasks = async () => {
     try {
@@ -23,6 +24,8 @@ const Tasks = () => {
       const res = await axiosInstance.post("/tasks", { title });
       setTasks([...tasks, res.data]);
       setTitle("");
+      setLoading(true);
+
     } catch (err) {
       alert(err.response?.data?.message || "Cannot add task");
     }
@@ -39,6 +42,8 @@ const Tasks = () => {
 
   useEffect(() => {
     fetchTasks();
+        // setLoading(false);
+
   }, []);
 
 const [editId, setEditId] = useState(null);
@@ -62,6 +67,8 @@ const handleUpdate = async () => {
     ));
 
     setEditId(null);
+    setLoading(false);
+
     setEditText("");
   } catch (err) {
     alert(err.response?.data?.message || "Cannot update task");
@@ -71,10 +78,12 @@ const handleUpdate = async () => {
 
 
   return (
-    <div className="flex flex-col items-center justify-center mt-15 md:mt-auto">
-      <h2 className="mb-2 mt-1 text-2xl text-blue-600 font-bold">Tasks</h2>
-      <p className="text-red-500 mb-2">You have to login to enter tasks other wise Tasks won't add </p>
-
+    <div className="flex flex-col items-center justify-center mt-15 md:mt-5">
+      <div className="">
+      {/* <h2 className="mb-2 mt-1 text-2xl text-blue-600 font-bold">Tasks</h2> */}
+      <p className="text-red-500 mb-2 text-[10px]">You have to login to enter tasks other wise Tasks won't add </p>
+      {/* <p className="text-green-500 text-[15px]">"""After adding a task, it may take a few seconds for the data to be saved and fetched from the database. Please wait a moment""".</p> */}
+  
       <div>
       <input className="border-blue-600 border-[1.5px] text-black bg-white cursor-pointer  rounded p-1"
         placeholder="New task"
@@ -82,6 +91,12 @@ const handleUpdate = async () => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <button className="bg-blue-700 border-[1.5px] text-white  rounded p-1 ml-2 cursor-pointer" onClick={addTask}>Add Task</button>
+
+      {loading &&(
+        <p className="text-green-500 text-[15px]">Wait until fetch.</p>
+
+      )}
+      </div>
       </div>
 
 
@@ -102,6 +117,8 @@ const handleUpdate = async () => {
 
 
 <div className=" shadow-[0_10px_25px_rgba(0,0,0,0.12)] pl-20 pr-20 bg-white rounded-2xl  p-4 mt-4 max-w-300 grid place-items-center">
+  <p className="text-orange-600">You can Edit the text after Adding</p>
+
 {tasks.map((task) => (
   <div key={task._id} >
     {editId === task._id ? (
