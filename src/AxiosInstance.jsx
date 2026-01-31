@@ -1,10 +1,8 @@
-
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://backend-taskmanagement-uc6c.onrender.com/api",
+  baseURL: "https://backend-taskmanagement-uc6c.onrender.com/api"
 });
-
 
 axiosInstance.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
